@@ -1,0 +1,97 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "BlipProcessor",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "BlipForConditionalGeneration",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "BlipConfig",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_DIRECTORY",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "MODEL_DIRECTORY = \"blip-image-captioning-base\"\nMODEL_PATH = os.path.join(MODEL_DIRECTORY)\nPROCESSOR_PATH = os.path.join(MODEL_DIRECTORY)\n# Check if the model and processor are downloaded\nif not os.path.exists(MODEL_PATH) or not os.path.exists(PROCESSOR_PATH):\n    st.error(\"Error: Model and processor not found. Please download the model first.\")\nelse:\n    processor = BlipProcessor.from_pretrained(PROCESSOR_PATH)\n    config = BlipConfig.from_pretrained(MODEL_PATH)\n    # Define a custom model architecture with two additional layers",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "MODEL_PATH = os.path.join(MODEL_DIRECTORY)\nPROCESSOR_PATH = os.path.join(MODEL_DIRECTORY)\n# Check if the model and processor are downloaded\nif not os.path.exists(MODEL_PATH) or not os.path.exists(PROCESSOR_PATH):\n    st.error(\"Error: Model and processor not found. Please download the model first.\")\nelse:\n    processor = BlipProcessor.from_pretrained(PROCESSOR_PATH)\n    config = BlipConfig.from_pretrained(MODEL_PATH)\n    # Define a custom model architecture with two additional layers\n    class CustomBlipForConditionalGeneration(BlipForConditionalGeneration):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "PROCESSOR_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "PROCESSOR_PATH = os.path.join(MODEL_DIRECTORY)\n# Check if the model and processor are downloaded\nif not os.path.exists(MODEL_PATH) or not os.path.exists(PROCESSOR_PATH):\n    st.error(\"Error: Model and processor not found. Please download the model first.\")\nelse:\n    processor = BlipProcessor.from_pretrained(PROCESSOR_PATH)\n    config = BlipConfig.from_pretrained(MODEL_PATH)\n    # Define a custom model architecture with two additional layers\n    class CustomBlipForConditionalGeneration(BlipForConditionalGeneration):\n        def __init__(self, config):",
+        "detail": "app",
+        "documentation": {}
+    }
+]
